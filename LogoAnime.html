@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Réaction</title>
+    <style>
+img {
+  --color: #9f3fba; /* la couleur de la bordure */
+  --border: 10px;   /* l'épaisseur de la bordure */
+  --offset: 20px;   /* contrôle le décalage */
+  --gap: 5px;       /* l'espace au survol */
+  
+  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)), var(--color) 0;
+  --_o: calc(3*var(--offset));
+  padding: 
+    calc(var(--gap) + var(--border))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border));
+  background: 
+    linear-gradient(var(--_c)) var(--_o) var(--_o), 
+    linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+  background-repeat: no-repeat;
+  filter: grayscale(.4);
+  transition: .5s;
+  cursor: pointer;
+  opacity: 0.5;
+  height: 40px;
+  width: 40px;
+}
+
+img:hover {
+  background-position: 0px 0px;
+  background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+  filter: grayscale(0);
+  opacity: 1; /* Ajout de l'opacité au survol */
+}
+
+.taille{
+    height: 500px;
+    width: 500px;
+}
+
+body {
+  background: #e8e9ba;
+  display: grid;
+  gap: 40px;
+  height: 100vh;
+  margin: 0;
+  grid-auto-flow: column;
+  place-content: center;
+}
+    </style>
+</head>
+<body>
+        <img href="https://omega-approach.fr/" src="logo_instagram.png">
+        <img src="google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png" class="taille">
+</body>
+</html>

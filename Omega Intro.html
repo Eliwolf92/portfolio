@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmegaA</title>
+</head>
+<body>
+<style>
+
+#tyu{
+    position: absolute;
+    height: 1088px;
+    width: 1928px;
+    left: -8px;
+    top: -8px;
+    background-color: #272738;
+    animation: pre-loader 20.5s;
+}
+
+@keyframes pre-loader {
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    90%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(-1200px);
+    }
+}
+
+#cercle1{
+    width: 250px;
+    height: 250px;
+    background-color: #cb8118;
+    border-radius: 100%;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    box-shadow: 0 0px 50px 20px #b0722b
+}
+
+#cercle2{
+    width: 400px;
+    height: 400px;
+    background-color: #3c3d60;
+    border-radius: 100%;
+    position: absolute;
+    top: 320px;
+    border: solid 2px #cb8118;
+    animation: cercle_qui_monte 20s;
+    left: 40px;
+
+}
+
+#triangle{
+    height: 310px;
+    width: 345px;
+    position: absolute;
+    top: 0px;
+    left: 27px;
+    animation: triangle 3s;
+
+}
+
+#Titre{
+    height: 25%;
+    position: absolute;
+    top: 420px;
+    left: 670px;
+    animation: Titre 20s;
+}
+
+@keyframes cercle_qui_monte {
+    0%{
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    10%{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    12%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    80%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    85%{
+        opacity: 0.7;
+        transform: translateY(10);
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateY(-700px);
+    }
+    
+}
+
+
+
+
+@keyframes triangle {
+    
+    0%{
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
+
+@keyframes Titre {
+
+    0%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: 0;
+    }
+
+    35%{
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+.pulse{
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }  
+
+    100%{
+        box-shadow: 0 0 0 100px rgb(34, 1, 1);
+    }
+} 
+
+
+
+</style>
+<div id="tyu">
+<div id="cercle2" class="pulse">
+    <div id="cercle1">
+    </div>
+    <img id="triangle" src="Picsart_24-01-11_12-51-51-868.png">
+</div>
+<img id="Titre" src="logo_omega_variante1.png">
+</div>
+</body>
+</html>
+
